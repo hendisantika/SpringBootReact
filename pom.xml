@@ -21,7 +21,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>23</java.version>
+		<java.version>17</java.version>
 	</properties>
 
 	<dependencies>
@@ -60,7 +60,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
     				<addResources>true</addResources>
-					<source>23</source>
+					<source>17</source>
 					<target>17</target>
 					<release>17</release>
 				</configuration>
