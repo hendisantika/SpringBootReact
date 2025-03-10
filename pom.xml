@@ -61,8 +61,8 @@
 				<configuration>
     				<addResources>true</addResources>
 					<source>23</source>
-					<target>23</target>
-					<release>23</release>
+					<target>17</target>
+					<release>17</release>
 				</configuration>
 			</plugin>
 			<plugin>
