@@ -12,4 +12,4 @@ Launch app by typing: `mvnw clean spring-boot:run`
 
 ## Screenshot
 
-![Screenshot](http://juhahinkula.github.com/img/springreact.png)
+![Screenshot](img/home.png "Home Page")
