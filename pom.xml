@@ -60,6 +60,9 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
     				<addResources>true</addResources>
+					<source>23</source>
+					<target>23</target>
+					<release>23</release>
 				</configuration>
 			</plugin>
 			<plugin>
