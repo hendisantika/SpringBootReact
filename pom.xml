@@ -60,14 +60,24 @@
 				<artifactId>jib-maven-plugin</artifactId>
 				<version>3.1.4</version>
 				<configuration>
+					<from>
+						<image>openjdk:11</image>
+					</from>
 					<to>
-						<image>gcr.io/$GOOGLE_CLOUD_PROJECT</image>
+						<image>gcr.io/$GOOGLE_CLOUD_PROJECT/spring-boot-hello-app:v1</image>
 					</to>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 				<configuration>
     				<addResources>true</addResources>
 					<source>17</source>
