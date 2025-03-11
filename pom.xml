@@ -59,6 +59,11 @@
 				<groupId>com.google.cloud.tools</groupId>
 				<artifactId>jib-maven-plugin</artifactId>
 				<version>3.1.4</version>
+				<configuration>
+					<to>
+						<image>gcr.io/$GOOGLE_CLOUD_PROJECT</image>
+					</to>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -66,8 +71,8 @@
 				<configuration>
     				<addResources>true</addResources>
 					<source>17</source>
-					<target>17</target>
-					<release>17</release>
+					<target>11</target>
+					<release>11</release>
 				</configuration>
 			</plugin>
 			<plugin>
