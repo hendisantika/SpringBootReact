@@ -78,12 +78,12 @@
 						</goals>
 					</execution>
 				</executions>
-				<configuration>
-    				<addResources>true</addResources>
-					<source>17</source>
-					<target>11</target>
-					<release>11</release>
-				</configuration>
+				<!--				<configuration>-->
+				<!--    				<addResources>true</addResources>-->
+				<!--					<source>17</source>-->
+				<!--					<target>11</target>-->
+				<!--					<release>11</release>-->
+				<!--				</configuration>-->
 			</plugin>
 			<plugin>
 				<groupId>com.google.cloud.tools</groupId>
