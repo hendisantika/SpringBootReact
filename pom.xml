@@ -21,7 +21,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>21</java.version>
+		<java.version>25</java.version>
 	</properties>
 
 	<dependencies>
@@ -75,7 +75,7 @@
 				<version>3.5.2</version>
 				<configuration>
 					<from>
-						<image>openjdk:21</image>
+						<image>eclipse-temurin:25-jre</image>
 					</from>
 					<to>
 						<image>gcr.io/$GOOGLE_CLOUD_PROJECT/spring-boot-hello-app:v1</image>
