@@ -15,8 +15,8 @@ updates:
       - "dependencies"
       - "java"
     commit-message:
-      prefix: "build(deps)"
-      prefix-development: "build(deps-dev)"
+      prefix: "build"
+      prefix-development: "build"
       include: "scope"
     groups:
       # Spring Boot parent & starters move together
@@ -30,8 +30,14 @@ updates:
       dekorate:
         patterns:
           - "io.dekorate:*"
-      # Everything else: batch minor & patch bumps into a single PR
+      # Everything else: batch minor & patch bumps into a single PR.
+      # Exclude the named groups above, otherwise Dependabot treats this
+      # update-types group as "more specific" and steals their dependencies.
       maven-minor-patch:
+        exclude-patterns:
+          - "org.springframework.boot:*"
+          - "com.google.cloud.tools:*"
+          - "io.dekorate:*"
         update-types:
           - "minor"
           - "patch"
@@ -51,7 +57,7 @@ updates:
       - "dependencies"
       - "github_actions"
     commit-message:
-      prefix: "ci(deps)"
+      prefix: "ci"
       include: "scope"
     groups:
       github-actions:

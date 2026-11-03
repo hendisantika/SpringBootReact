@@ -59,7 +59,7 @@ Build a container image with Jib (base image `eclipse-temurin:25-jre`):
 * **Dependabot** (`.github/dependabot.yml`) checks Maven dependencies and GitHub Actions daily
   (05:00 Asia/Jakarta). Updates are grouped (Spring Boot, Google Cloud tools, Dekorate,
   minor/patch, GitHub Actions) and labelled, using conventional commit prefixes
-  (`build(deps)` / `ci(deps)`).
+  (`build(deps): ...` / `ci(deps): ...`).
 
 ## Screenshot
 
