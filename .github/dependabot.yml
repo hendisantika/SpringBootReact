@@ -1,13 +1,59 @@
 version: 2
 updates:
-  - package-ecosystem: maven
+  # Maven dependencies (Spring Boot, plugins, libraries)
+  - package-ecosystem: "maven"
     directory: "/"
     schedule:
-      interval: daily
-      time: '05:00'
-      timezone: Asia/Jakarta
+      interval: "daily"
+      time: "05:00"
+      timezone: "Asia/Jakarta"
     open-pull-requests-limit: 10
+    target-branch: "master"
+    assignees:
+      - "hendisantika"
+    labels:
+      - "dependencies"
+      - "java"
+    commit-message:
+      prefix: "build(deps)"
+      prefix-development: "build(deps-dev)"
+      include: "scope"
+    groups:
+      # Spring Boot parent & starters move together
+      spring-boot:
+        patterns:
+          - "org.springframework.boot:*"
+      # Google Cloud build plugins (Jib, App Engine)
+      google-cloud-tools:
+        patterns:
+          - "com.google.cloud.tools:*"
+      dekorate:
+        patterns:
+          - "io.dekorate:*"
+      # Everything else: batch minor & patch bumps into a single PR
+      maven-minor-patch:
+        update-types:
+          - "minor"
+          - "patch"
+
+  # GitHub Actions used in workflows
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "daily"
+      time: "05:00"
+      timezone: "Asia/Jakarta"
+    open-pull-requests-limit: 10
+    target-branch: "master"
+    assignees:
+      - "hendisantika"
+    labels:
+      - "dependencies"
+      - "github_actions"
+    commit-message:
+      prefix: "ci(deps)"
+      include: "scope"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
