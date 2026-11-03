@@ -14,6 +14,12 @@ updates:
     labels:
       - "dependencies"
       - "java"
+    # Wait before proposing freshly released versions (security updates are not delayed)
+    cooldown:
+      default-days: 3
+      semver-major-days: 7
+      semver-minor-days: 3
+      semver-patch-days: 1
     commit-message:
       prefix: "build"
       prefix-development: "build"
@@ -56,6 +62,8 @@ updates:
     labels:
       - "dependencies"
       - "github_actions"
+    cooldown:
+      default-days: 3
     commit-message:
       prefix: "ci"
       include: "scope"
